@@ -1,26 +1,21 @@
-# Boxing Coach — PWA v1.0
+# Boxing Coach v2 — PWA con tutoriales
 
-Incluye 27 combinaciones: 16 secuencias atribuidas directamente a guías y 11 variantes de entrenamiento construidas sobre fundamentos publicados. Cada tarjeta enlaza a su referencia y distingue la procedencia. La defensa simula un ataque rival, no garantiza una respuesta universal.
+Mantiene la v1 (asaltos y 27 combinaciones) y añade **Tutoriales**: 6 golpes, 5 defensas y 5 fichas de combinaciones destacadas. Desde cualquier combinación del entrenamiento puedes abrir su ficha.
+
+## Multimedia
+- Imágenes esquemáticas originales: `media/images/*.svg`. Son ilustraciones orientativas, **no fotogramas ni demostraciones técnicas exactas**. Sustitúyelas por imágenes propias/licenciadas si quieres.
+- Vídeos: coloca MP4/WebM propios o con permiso en `media/videos/` y cambia `videoLocal:null` por `videoLocal:'./media/videos/1.mp4'` en la ficha deseada dentro de `tutorials.js`.
+- Un enlace externo verificado de Pullmans Gym sirve como apoyo para esquivas y movimientos bajo ganchos. No se descarga ni incrusta material ajeno. Las demás fichas contienen enlaces a referencias generales, **no vídeos individuales verificados**.
+- Los MP4 locales declarados deben añadirse a la lista `FILES` de `sw.js` si quieres que se descarguen para uso sin conexión. Valora el tamaño antes de hacerlo.
+- `tutorials-data.json` es una copia legible de las fichas; **para editar la app que se ejecuta hay que modificar `TUTORIALS` en `tutorials.js`**.
 
 ## Instalación
+1. Sube **el contenido de esta carpeta** (no la carpeta contenedora) a la raíz de un repositorio GitHub.
+2. Settings → Pages → Deploy from a branch → `main` / `(root)`.
+3. Abre el enlace HTTPS en Chrome/Android o Safari/iPhone y usa «Añadir a pantalla de inicio».
+4. Tras entrar una vez con conexión, las fichas y las ilustraciones funcionan sin conexión. Los enlaces externos necesitan internet.
 
-La instalación PWA y el funcionamiento sin conexión requieren **HTTPS** (o `localhost` durante pruebas). Abrir `index.html` directamente como archivo (`file://`) no permite instalar correctamente la PWA.
+Para probar en PC: `python -m http.server 8000` desde esta carpeta y visita http://localhost:8000.
 
-### Publicación con GitHub Pages
-1. Descomprime este ZIP y sube **el contenido de la carpeta** a un repositorio GitHub (ej. `boxing-coach`).
-2. Ve a Settings → Pages → Build and deployment → Deploy from a branch, selecciona `main` y `/ (root)` y guarda.
-3. Abre `https://TU_USUARIO.github.io/boxing-coach/` desde el móvil.
-4. Android/Chrome: menú ⋮ → Añadir a pantalla de inicio / Instalar aplicación. iOS/Safari: Compartir → Añadir a pantalla de inicio.
-5. Tras la primera carga completa, las pantallas y el cronómetro funcionan sin conexión. Las fuentes externas requieren internet.
-
-### Prueba local en PC
-En esta carpeta, ejecuta `python -m http.server 8000` y abre `http://localhost:8000`. En móvil, usa el enlace HTTPS publicado para instalar la app.
-
-## Funciones
-- Asaltos de 1–4 min; descansos de 15–90 s; 1–10 asaltos.
-- Cambios de combinaciones configurables entre 5 y 20 s.
-- Dificultad, golpes / defensa y guardia diestra / zurda.
-- Inicio, pausa, siguiente combinación, reinicio; biblioteca y enlaces a fuentes.
-- Preferencias guardadas localmente; archivos disponibles sin red tras la primera carga.
-
-Nota: si bloqueas la pantalla o el navegador suspende la pestaña, el temporizador recupera el tiempo transcurrido al volver, pero no puede dar avisos en segundo plano. Mantén la pantalla activa para ver las combinaciones.
+## Advertencias
+Los ejercicios de defensa representan ataques imaginarios del rival: un slip corresponde normalmente a golpes rectos, y el roll por debajo a ganchos. La respuesta depende de distancia, guardia y situación. No se debe presentar una secuencia como respuesta universal. Los dibujos de esta versión son esquemáticos y no sustituyen una demostración de un entrenador.
