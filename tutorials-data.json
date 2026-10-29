@@ -1,0 +1,327 @@
+[
+  {
+    "id": "1",
+    "title": "Jab",
+    "type": "punch",
+    "description": "Recto de la mano adelantada; trabaja distancia y preparación.",
+    "steps": [
+      "Parte de guardia equilibrada.",
+      "Extiende la mano adelantada en línea recta y protege la barbilla con el hombro.",
+      "Recupera el puño rápidamente a la guardia."
+    ],
+    "errors": [
+      "Bajar la mano atrasada.",
+      "Quedarte con el brazo extendido."
+    ],
+    "image": "./media/images/1.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Guía técnica general",
+    "sourceUrl": "https://www.boxing.org/techniques"
+  },
+  {
+    "id": "2",
+    "title": "Directo (cross)",
+    "type": "punch",
+    "description": "Recto de la mano atrasada, con transferencia de peso controlada.",
+    "steps": [
+      "Inicia en guardia sin cargar el golpe hacia atrás.",
+      "Rota pie posterior y cadera, llevando el puño en línea recta.",
+      "Recupera brazo y postura sin volcarte hacia delante."
+    ],
+    "errors": [
+      "Levantar la barbilla.",
+      "Perder equilibrio por girar en exceso."
+    ],
+    "image": "./media/images/2.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Guía técnica general",
+    "sourceUrl": "https://www.boxing.org/techniques"
+  },
+  {
+    "id": "3",
+    "title": "Gancho adelantado",
+    "type": "punch",
+    "description": "Golpe circular corto a media distancia.",
+    "steps": [
+      "Mantén codo y puño coordinados.",
+      "Gira cadera y pie adelantados.",
+      "Vuelve a guardia y controla la distancia."
+    ],
+    "errors": [
+      "Abrir demasiado el brazo.",
+      "Golpear solo con el hombro."
+    ],
+    "image": "./media/images/3.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Guía técnica general",
+    "sourceUrl": "https://www.boxing.org/techniques"
+  },
+  {
+    "id": "4",
+    "title": "Gancho atrasado",
+    "type": "punch",
+    "description": "Golpe circular de la mano atrasada, con pivote.",
+    "steps": [
+      "Acorta distancia antes de lanzarlo.",
+      "Gira cadera y pie atrasados.",
+      "Mantén barbilla recogida y recupera guardia."
+    ],
+    "errors": [
+      "Telegrafiar el golpe.",
+      "Quedar cuadrado ante el rival."
+    ],
+    "image": "./media/images/4.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Guía técnica general",
+    "sourceUrl": "https://www.boxing.org/techniques"
+  },
+  {
+    "id": "5",
+    "title": "Uppercut adelantado",
+    "type": "punch",
+    "description": "Golpe ascendente corto desde una base estable.",
+    "steps": [
+      "Flexiona ligeramente rodillas sin inclinarte.",
+      "Empuja desde piernas y cadera.",
+      "Sube el puño en trayectoria compacta y vuelve a guardia."
+    ],
+    "errors": [
+      "Bajar el puño hasta la cintura.",
+      "Levantarte de puntillas."
+    ],
+    "image": "./media/images/5.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Guía técnica general",
+    "sourceUrl": "https://www.boxing.org/techniques"
+  },
+  {
+    "id": "6",
+    "title": "Uppercut atrasado",
+    "type": "punch",
+    "description": "Ascendente de mano atrasada, normalmente a corta distancia.",
+    "steps": [
+      "Mantén la distancia adecuada.",
+      "Impulsa el golpe con piernas y rotación de cadera.",
+      "Recupera postura y protege el lado opuesto."
+    ],
+    "errors": [
+      "Abrir demasiado el codo.",
+      "Dejar caer la mano adelantada."
+    ],
+    "image": "./media/images/6.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Guía técnica general",
+    "sourceUrl": "https://www.boxing.org/techniques"
+  },
+  {
+    "id": "ED",
+    "title": "Esquiva derecha",
+    "type": "defense",
+    "description": "Desplazamiento corto de la cabeza hacia tu derecha contra un recto imaginario.",
+    "steps": [
+      "Identifica el recto que simulas recibir.",
+      "Flexiona piernas y rota ligeramente tronco para salir de la línea.",
+      "Ojos al frente, manos altas y posición para responder."
+    ],
+    "errors": [
+      "Mover solo el cuello.",
+      "Lanzarte muy lejos de tu base."
+    ],
+    "image": "./media/images/ED.svg",
+    "videoLocal": null,
+    "videoUrl": "https://www.youtube.com/watch?v=pkX0VJNqXsA",
+    "sourceName": "Pullmans Gym · Slips & Rolls",
+    "sourceUrl": "https://www.youtube.com/watch?v=pkX0VJNqXsA"
+  },
+  {
+    "id": "EI",
+    "title": "Esquiva izquierda",
+    "type": "defense",
+    "description": "Desplazamiento corto de cabeza hacia tu izquierda contra un recto imaginario.",
+    "steps": [
+      "Prepara una línea de ataque simulada.",
+      "Gira levemente tronco y piernas hacia la izquierda.",
+      "Recupera la guardia sin mirar al suelo."
+    ],
+    "errors": [
+      "Inclinar la cintura bruscamente.",
+      "Bajar las manos."
+    ],
+    "image": "./media/images/EI.svg",
+    "videoLocal": null,
+    "videoUrl": "https://www.youtube.com/watch?v=pkX0VJNqXsA",
+    "sourceName": "Pullmans Gym · Slips & Rolls",
+    "sourceUrl": "https://www.youtube.com/watch?v=pkX0VJNqXsA"
+  },
+  {
+    "id": "RD",
+    "title": "Rodar derecha",
+    "type": "defense",
+    "description": "Paso bajo un gancho simulado, saliendo por la derecha.",
+    "steps": [
+      "Imagina un gancho horizontal a la cabeza.",
+      "Flexiona rodillas y dibuja una U compacta debajo del golpe.",
+      "Asciende manteniendo visión y guardia."
+    ],
+    "errors": [
+      "Doblar solo la espalda.",
+      "Bajar demasiado la cabeza."
+    ],
+    "image": "./media/images/RD.svg",
+    "videoLocal": null,
+    "videoUrl": "https://www.youtube.com/watch?v=pkX0VJNqXsA",
+    "sourceName": "Pullmans Gym · Slips & Rolls",
+    "sourceUrl": "https://www.youtube.com/watch?v=pkX0VJNqXsA"
+  },
+  {
+    "id": "RI",
+    "title": "Rodar izquierda",
+    "type": "defense",
+    "description": "Paso bajo un gancho simulado, saliendo por la izquierda.",
+    "steps": [
+      "Imagina un gancho horizontal a la cabeza.",
+      "Baja con rodillas, cruza bajo su trayectoria y sube.",
+      "Queda estable antes del contraataque."
+    ],
+    "errors": [
+      "Mirar al suelo.",
+      "Perder el equilibrio lateral."
+    ],
+    "image": "./media/images/RI.svg",
+    "videoLocal": null,
+    "videoUrl": "https://www.youtube.com/watch?v=pkX0VJNqXsA",
+    "sourceName": "Pullmans Gym · Slips & Rolls",
+    "sourceUrl": "https://www.youtube.com/watch?v=pkX0VJNqXsA"
+  },
+  {
+    "id": "PL",
+    "title": "Paso lateral",
+    "type": "defense",
+    "description": "Salida para cambiar el ángulo tras una secuencia.",
+    "steps": [
+      "Mantén base y distancia entre pies.",
+      "Desplázate lateralmente sin cruzarlos.",
+      "Orienta torso y guardia hacia el objetivo."
+    ],
+    "errors": [
+      "Juntar o cruzar pies.",
+      "Girar de espaldas."
+    ],
+    "image": "./media/images/PL.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Guía técnica general",
+    "sourceUrl": "https://www.boxing.org/techniques"
+  },
+  {
+    "id": "combo:1-2",
+    "title": "Jab + directo",
+    "type": "combo",
+    "description": "Enlaza dos rectos manteniendo la distancia.",
+    "steps": [
+      "Realiza la secuencia lentamente y con equilibrio.",
+      "Simula el ataque rival solo cuando aparezca una defensa.",
+      "Vuelve a la guardia y repite desde una posición estable."
+    ],
+    "errors": [
+      "Acelerar antes de dominar la técnica.",
+      "Olvidar la distancia y la guardia."
+    ],
+    "image": "./media/images/1.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Secuencia de la biblioteca",
+    "sourceUrl": null,
+    "sequence": "1-2"
+  },
+  {
+    "id": "combo:1-1-2",
+    "title": "Doble jab + directo",
+    "type": "combo",
+    "description": "Marca ritmo con dos jabs y termina con la mano atrasada.",
+    "steps": [
+      "Realiza la secuencia lentamente y con equilibrio.",
+      "Simula el ataque rival solo cuando aparezca una defensa.",
+      "Vuelve a la guardia y repite desde una posición estable."
+    ],
+    "errors": [
+      "Acelerar antes de dominar la técnica.",
+      "Olvidar la distancia y la guardia."
+    ],
+    "image": "./media/images/1.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Secuencia de la biblioteca",
+    "sourceUrl": null,
+    "sequence": "1-1-2"
+  },
+  {
+    "id": "combo:1-2-3",
+    "title": "Jab + directo + gancho",
+    "type": "combo",
+    "description": "Tras el directo, aprovecha la rotación para el gancho.",
+    "steps": [
+      "Realiza la secuencia lentamente y con equilibrio.",
+      "Simula el ataque rival solo cuando aparezca una defensa.",
+      "Vuelve a la guardia y repite desde una posición estable."
+    ],
+    "errors": [
+      "Acelerar antes de dominar la técnica.",
+      "Olvidar la distancia y la guardia."
+    ],
+    "image": "./media/images/1.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Secuencia de la biblioteca",
+    "sourceUrl": null,
+    "sequence": "1-2-3"
+  },
+  {
+    "id": "combo:1-2-ED-2",
+    "title": "Jab + directo + esquiva + directo",
+    "type": "combo",
+    "description": "Simula una respuesta recta tras el 1-2; esquiva antes de contraatacar.",
+    "steps": [
+      "Realiza la secuencia lentamente y con equilibrio.",
+      "Simula el ataque rival solo cuando aparezca una defensa.",
+      "Vuelve a la guardia y repite desde una posición estable."
+    ],
+    "errors": [
+      "Acelerar antes de dominar la técnica.",
+      "Olvidar la distancia y la guardia."
+    ],
+    "image": "./media/images/1.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Secuencia de la biblioteca",
+    "sourceUrl": null,
+    "sequence": "1-2-ED-2"
+  },
+  {
+    "id": "combo:1-2-3-RI",
+    "title": "1-2-3 + rodar izquierda",
+    "type": "combo",
+    "description": "Después del gancho, simula uno rival y pasa por debajo.",
+    "steps": [
+      "Realiza la secuencia lentamente y con equilibrio.",
+      "Simula el ataque rival solo cuando aparezca una defensa.",
+      "Vuelve a la guardia y repite desde una posición estable."
+    ],
+    "errors": [
+      "Acelerar antes de dominar la técnica.",
+      "Olvidar la distancia y la guardia."
+    ],
+    "image": "./media/images/1.svg",
+    "videoLocal": null,
+    "videoUrl": null,
+    "sourceName": "Secuencia de la biblioteca",
+    "sourceUrl": null,
+    "sequence": "1-2-3-RI"
+  }
+]
