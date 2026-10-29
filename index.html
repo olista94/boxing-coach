@@ -1,11 +1,127 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0c1426"><meta name="description" content="Entrenador de boxeo: combinaciones técnicas, defensa y asaltos cronometrados."><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icons/icon-192.png"><link rel="apple-touch-icon" href="./icons/icon-192.png"><title>Boxing Coach</title><link rel="stylesheet" href="./style.css"></head>
-<body><div class="app"><header><div class="brand"><span class="logo">BC</span><div><strong>BOXING COACH</strong><small>ENTRENA CON CRITERIO</small></div></div><span class="offline" id="network">LISTO</span></header><main>
-<nav class="tabs" aria-label="Secciones"><button class="tab active" data-tab="train">Entrenar</button><button class="tab" data-tab="library">Biblioteca</button><button class="tab" data-tab="guide">Guía</button></nav>
-<section id="train" class="view active"><div class="eyebrow">ENTRENAMIENTO EN PANTALLA</div><h1>Tu próximo golpe<br><em>tiene sentido.</em></h1><div class="settings"><label>Nivel<select id="level"><option value="all">Todos</option><option value="1">Básico</option><option value="2">Intermedio</option><option value="3">Avanzado</option></select></label><label>Guardia<select id="stance"><option value="orthodox">Diestra</option><option value="southpaw">Zurda</option></select></label><label>Defensas<select id="defense"><option value="yes">Incluir</option><option value="no">Solo golpes</option></select></label><label>Cambio de combo<select id="interval"><option value="5">5 segundos</option><option value="8" selected>8 segundos</option><option value="12">12 segundos</option><option value="15">15 segundos</option><option value="20">20 segundos</option></select></label><label>Asalto<select id="roundTime"><option value="60">1 minuto</option><option value="120">2 minutos</option><option value="180" selected>3 minutos</option><option value="240">4 minutos</option></select></label><label>Descanso<select id="restTime"><option value="15">15 segundos</option><option value="30">30 segundos</option><option value="60" selected>1 minuto</option><option value="90">90 segundos</option></select></label><label>Asaltos<select id="rounds"><option value="1">1</option><option value="3" selected>3</option><option value="5">5</option><option value="8">8</option><option value="10">10</option></select></label></div>
-<div class="timer-card"><div class="timer-top"><span id="phase">PREPARADO</span><span id="roundLabel">ASALTO 1 / 3</span></div><div id="timer" class="timer" role="timer" aria-label="Tiempo restante">03:00</div><div class="progress"><div id="progressBar"></div></div><p class="timer-hint" id="hint">Pulsa iniciar para comenzar el asalto</p></div>
-<div class="combo-card"><div class="combo-heading"><span id="comboTag">COMBINACIÓN · BÁSICO</span><span id="comboCount">01</span></div><div id="comboSequence" class="combo-sequence" aria-live="polite"></div><div id="comboNames" class="combo-names"></div><div id="comboNote" class="combo-note"></div><a id="comboSource" target="_blank" rel="noopener noreferrer" href="#">Ver referencia técnica ↗</a></div>
-<div class="actions"><button id="start" class="primary">▶ Iniciar</button><button id="next" class="secondary">↻ Otra combinación</button><button id="reset" class="ghost">Reiniciar</button></div><p class="footnote">Combinaciones seleccionadas, no generadas al azar. Entrena con control, guardia y técnica antes que velocidad.</p></section>
-<section id="library" class="view"><div class="eyebrow">REFERENCIAS Y EJERCICIOS</div><h1>Biblioteca<br><em>de combinaciones.</em></h1><p class="muted">Las secuencias «Fuente» aparecen en una guía enlazada. Las «Variantes» son ejercicios añadidos sobre esos fundamentos; no se atribuyen literalmente a un tutorial.</p><div class="filters"><button class="filter active" data-filter="all">Todas</button><button class="filter" data-filter="1">Básico</button><button class="filter" data-filter="2">Intermedio</button><button class="filter" data-filter="3">Avanzado</button><button class="filter" data-filter="def">Defensas</button></div><div id="libraryList" class="library-list"></div></section>
-<section id="guide" class="view"><div class="eyebrow">ANTES DE EMPEZAR</div><h1>Golpes<br><em>y defensas.</em></h1><p class="muted">La numeración se refiere a mano adelantada o atrasada, no siempre a izquierda o derecha. Con guardia zurda se invierten las manos.</p><div id="punchGuide" class="guide-grid"></div><h2>Movimientos defensivos</h2><div class="explain"><p><b>ED / EI · Esquiva a derecha / izquierda:</b> pequeño desplazamiento de cabeza con las piernas y el tronco; no te desequilibres.</p><p><b>RD / RI · Rodar bajo un gancho:</b> flexiona rodillas y pasa por debajo de un gancho imaginario hacia derecha / izquierda; no dobles solamente la cintura.</p><p><b>PL · Paso lateral:</b> sal de la línea de ataque manteniendo tu base y la guardia.</p><p>Los movimientos defensivos representan un <strong>ataque imaginario del rival</strong>. No son una respuesta universal: la dirección y el contraataque dependen del golpe que se esquiva, la distancia y la posición.</p></div><h2>Fuentes técnicas</h2><div id="sources"></div><p class="footnote">Uso orientativo para sombra o saco; la ejecución y la defensa deben corregirse con un entrenador. En un saco, simula las defensas sin perder la postura.</p></section>
-</main><footer>BOXING COACH · V1.0 · PWA SIN CONEXIÓN</footer></div><script src="./app.js" defer></script></body></html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0c1426">
+    <meta name="description" content="Entrenador de boxeo: combinaciones técnicas, defensa y asaltos cronometrados.">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./icons/icon-192.png">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+    <title>Boxing Coach</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="brand"><span class="logo">BC</span>
+                <div><strong>BOXING COACH</strong><small>ENTRENA CON CRITERIO</small></div>
+            </div><span class="offline" id="network">LISTO</span>
+        </header>
+        <main>
+            <nav class="tabs" aria-label="Secciones"><button class="tab active"
+                    data-tab="train">Entrenar</button><button class="tab" data-tab="library">Biblioteca</button><button
+                    class="tab" data-tab="guide">Guía</button></nav>
+            <section id="train" class="view active">
+                <div class="eyebrow">ENTRENAMIENTO EN PANTALLA</div>
+                <h1>Tu próximo golpe<br><em>tiene sentido.</em></h1>
+                <div class="settings"><label>Nivel<select id="level">
+                            <option value="all">Todos</option>
+                            <option value="1">Básico</option>
+                            <option value="2">Intermedio</option>
+                            <option value="3">Avanzado</option>
+                        </select></label><label>Guardia<select id="stance">
+                            <option value="orthodox">Diestra</option>
+                            <option value="southpaw">Zurda</option>
+                        </select></label><label>Defensas<select id="defense">
+                            <option value="yes">Incluir</option>
+                            <option value="no">Solo golpes</option>
+                        </select></label><label>Cambio de combo<select id="interval">
+                            <option value="5">5 segundos</option>
+                            <option value="8" selected>8 segundos</option>
+                            <option value="12">12 segundos</option>
+                            <option value="15">15 segundos</option>
+                            <option value="20">20 segundos</option>
+                        </select></label><label>Asalto<select id="roundTime">
+                            <option value="60">1 minuto</option>
+                            <option value="120">2 minutos</option>
+                            <option value="180" selected>3 minutos</option>
+                            <option value="240">4 minutos</option>
+                        </select></label><label>Descanso<select id="restTime">
+                            <option value="15">15 segundos</option>
+                            <option value="30">30 segundos</option>
+                            <option value="60" selected>1 minuto</option>
+                            <option value="90">90 segundos</option>
+                        </select></label><label>Asaltos<select id="rounds">
+                            <option value="1">1</option>
+                            <option value="3" selected>3</option>
+                            <option value="5">5</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                        </select></label></div>
+                <div class="timer-card">
+                    <div class="timer-top"><span id="phase">PREPARADO</span><span id="roundLabel">ASALTO 1 / 3</span>
+                    </div>
+                    <div id="timer" class="timer" role="timer" aria-label="Tiempo restante">03:00</div>
+                    <div class="progress">
+                        <div id="progressBar"></div>
+                    </div>
+                    <p class="timer-hint" id="hint">Pulsa iniciar para comenzar el asalto</p>
+                </div>
+                <div class="combo-card">
+                    <div class="combo-heading"><span id="comboTag">COMBINACIÓN · BÁSICO</span><span
+                            id="comboCount">01</span></div>
+                    <div id="comboSequence" class="combo-sequence" aria-live="polite"></div>
+                    <div id="comboNames" class="combo-names"></div>
+                    <div id="comboNote" class="combo-note"></div><a id="comboSource" target="_blank"
+                        rel="noopener noreferrer" href="#">Ver referencia técnica ↗</a>
+                </div>
+                <div class="actions"><button id="start" class="primary">▶ Iniciar</button><button id="next"
+                        class="secondary">↻ Otra combinación</button><button id="reset" class="ghost">Reiniciar</button>
+                </div>
+                <p class="footnote">Combinaciones seleccionadas, no generadas al azar. Entrena con control, guardia y
+                    técnica antes que velocidad.</p>
+            </section>
+            <section id="library" class="view">
+                <div class="eyebrow">REFERENCIAS Y EJERCICIOS</div>
+                <h1>Biblioteca<br><em>de combinaciones.</em></h1>
+                <p class="muted">Las secuencias «Fuente» aparecen en una guía enlazada. Las «Variantes» son ejercicios
+                    añadidos sobre esos fundamentos; no se atribuyen literalmente a un tutorial.</p>
+                <div class="filters"><button class="filter active" data-filter="all">Todas</button><button
+                        class="filter" data-filter="1">Básico</button><button class="filter"
+                        data-filter="2">Intermedio</button><button class="filter"
+                        data-filter="3">Avanzado</button><button class="filter" data-filter="def">Defensas</button>
+                </div>
+                <div id="libraryList" class="library-list"></div>
+            </section>
+            <section id="guide" class="view">
+                <div class="eyebrow">ANTES DE EMPEZAR</div>
+                <h1>Golpes<br><em>y defensas.</em></h1>
+                <p class="muted">La numeración se refiere a mano adelantada o atrasada, no siempre a izquierda o
+                    derecha. Con guardia zurda se invierten las manos.</p>
+                <div id="punchGuide" class="guide-grid"></div>
+                <h2>Movimientos defensivos</h2>
+                <div class="explain">
+                    <p><b>ED / EI · Esquiva a derecha / izquierda:</b> pequeño desplazamiento de cabeza con las piernas
+                        y el tronco; no te desequilibres.</p>
+                    <p><b>RD / RI · Rodar bajo un gancho:</b> flexiona rodillas y pasa por debajo de un gancho
+                        imaginario hacia derecha / izquierda; no dobles solamente la cintura.</p>
+                    <p><b>PL · Paso lateral:</b> sal de la línea de ataque manteniendo tu base y la guardia.</p>
+                    <p>Los movimientos defensivos representan un <strong>ataque imaginario del rival</strong>. No son
+                        una respuesta universal: la dirección y el contraataque dependen del golpe que se esquiva, la
+                        distancia y la posición.</p>
+                </div>
+                <h2>Fuentes técnicas</h2>
+                <div id="sources"></div>
+                <p class="footnote">Uso orientativo para sombra o saco; la ejecución y la defensa deben corregirse con
+                    un entrenador. En un saco, simula las defensas sin perder la postura.</p>
+            </section>
+        </main>
+        <footer>BOXING COACH · V1.0 · PWA SIN CONEXIÓN</footer>
+    </div>
+    <script src="./app.js" defer></script>
+</body>
+
+</html>
